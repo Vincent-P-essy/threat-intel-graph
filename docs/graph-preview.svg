@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="760" height="420" fill="#0b0f17"/>
+  <style>
+    .lbl { fill:#8b98a9; font-size:10px; }
+    .cap { fill:#e6edf3; font-size:12px; font-weight:600; }
+    .edge { stroke:#3a465c; stroke-width:1.4; }
+    .edge.hot { stroke:#38bdf8; stroke-width:1.8; }
+  </style>
+
+  <!-- edges: fancy bear cluster (left) -->
+  <line class="edge" x1="220" y1="200" x2="140" y2="130"/>
+  <line class="edge" x1="220" y1="200" x2="120" y2="220"/>
+  <line class="edge" x1="220" y1="200" x2="150" y2="300"/>
+  <line class="edge" x1="140" y1="130" x2="90"  y2="90"/>
+  <line class="edge" x1="150" y1="300" x2="95"  y2="340"/>
+  <line class="edge hot" x1="220" y1="200" x2="380" y2="200"/>
+  <line class="edge" x1="220" y1="200" x2="300" y2="120"/>
+
+  <!-- edges: ryuk cluster (right) -->
+  <line class="edge" x1="560" y1="210" x2="640" y2="140"/>
+  <line class="edge" x1="560" y1="210" x2="660" y2="230"/>
+  <line class="edge" x1="560" y1="210" x2="630" y2="310"/>
+  <line class="edge hot" x1="560" y1="210" x2="380" y2="200"/>
+  <line class="edge" x1="560" y1="210" x2="470" y2="120"/>
+
+  <!-- shared technique bridge -->
+  <line class="edge" x1="300" y1="120" x2="380" y2="200"/>
+  <line class="edge" x1="470" y1="120" x2="380" y2="200"/>
+
+  <!-- fancy bear nodes -->
+  <circle cx="220" cy="200" r="13" fill="#34d399"/>            <!-- campaign -->
+  <text class="lbl" x="220" y="230" text-anchor="middle">Fancy Bear 2026</text>
+  <circle cx="300" cy="120" r="12" fill="#38bdf8"/>            <!-- actor -->
+  <text class="lbl" x="300" y="104" text-anchor="middle">APT28</text>
+  <circle cx="140" cy="130" r="8"  fill="#fbbf24"/>            <!-- domain -->
+  <circle cx="90"  cy="90"  r="6"  fill="#f87171"/>            <!-- ip -->
+  <circle cx="120" cy="220" r="9"  fill="#f43f5e"/>            <!-- malware -->
+  <circle cx="150" cy="300" r="7"  fill="#a78bfa"/>            <!-- hash -->
+  <circle cx="95"  cy="340" r="6"  fill="#f87171"/>            <!-- ip -->
+
+  <!-- shared technique -->
+  <circle cx="380" cy="200" r="9"  fill="#60a5fa"/>            <!-- technique T1071 -->
+  <text class="lbl" x="380" y="228" text-anchor="middle">T1071 (shared)</text>
+
+  <!-- ryuk nodes -->
+  <circle cx="560" cy="210" r="13" fill="#34d399"/>            <!-- campaign -->
+  <text class="lbl" x="560" y="240" text-anchor="middle">Ryuk Wave 2026</text>
+  <circle cx="470" cy="120" r="12" fill="#38bdf8"/>            <!-- actor -->
+  <text class="lbl" x="470" y="104" text-anchor="middle">FIN12</text>
+  <circle cx="640" cy="140" r="8"  fill="#fbbf24"/>
+  <circle cx="660" cy="230" r="9"  fill="#f43f5e"/>
+  <circle cx="630" cy="310" r="7"  fill="#a78bfa"/>
+
+  <!-- legend -->
+  <text class="cap" x="24" y="30">Threat Intel Graph — two campaigns bridged by a shared ATT&amp;CK technique</text>
+  <g transform="translate(24,384)">
+    <circle cx="6"  cy="0" r="5" fill="#38bdf8"/><text class="lbl" x="16" y="4">actor</text>
+    <circle cx="76" cy="0" r="5" fill="#34d399"/><text class="lbl" x="86" y="4">campaign</text>
+    <circle cx="166" cy="0" r="5" fill="#60a5fa"/><text class="lbl" x="176" y="4">technique</text>
+    <circle cx="256" cy="0" r="5" fill="#f43f5e"/><text class="lbl" x="266" y="4">malware</text>
+    <circle cx="336" cy="0" r="5" fill="#f87171"/><text class="lbl" x="346" y="4">ip</text>
+    <circle cx="386" cy="0" r="5" fill="#fbbf24"/><text class="lbl" x="396" y="4">domain</text>
+    <circle cx="456" cy="0" r="5" fill="#a78bfa"/><text class="lbl" x="466" y="4">hash</text>
+  </g>
+</svg>

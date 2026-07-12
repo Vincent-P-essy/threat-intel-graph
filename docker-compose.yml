@@ -1,0 +1,28 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # Point at Neo4j to use it; leave unset for the in-memory graph.
+      NEO4J_URI: ${NEO4J_URI:-}
+      NEO4J_USER: ${NEO4J_USER:-neo4j}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:-neo4jpassword}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      TIG_MODEL: ${TIG_MODEL:-claude-opus-4-8}
+    depends_on:
+      - neo4j
+
+  neo4j:
+    image: neo4j:5-community
+    environment:
+      NEO4J_AUTH: neo4j/neo4jpassword
+      NEO4J_PLUGINS: '["graph-data-science"]'
+    ports:
+      - "7474:7474"   # browser
+      - "7687:7687"   # bolt
+    volumes:
+      - neo4j-data:/data
+
+volumes:
+  neo4j-data:
