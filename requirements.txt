@@ -2,8 +2,9 @@
 fastapi==0.111.0
 uvicorn[standard]==0.29.0
 
-# Graph engine (in-memory default)
+# Graph engine (in-memory default). scipy backs PageRank; numpy is its dep.
 networkx==3.3
+scipy==1.13.0
 
 # Neo4j adapter (optional at runtime)
 neo4j==5.20.0
