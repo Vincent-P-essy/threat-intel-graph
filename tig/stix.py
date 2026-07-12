@@ -26,11 +26,7 @@ def _object_for(node: dict[str, Any]) -> dict[str, Any]:
         obj["created"] = _TS
         obj["modified"] = _TS
 
-    if stix_type == "ipv4-addr":
-        obj["value"] = node["value"]
-    elif stix_type == "domain-name":
-        obj["value"] = node["value"]
-    elif stix_type == "url":
+    if stix_type in ("ipv4-addr", "domain-name", "url"):
         obj["value"] = node["value"]
     elif stix_type == "file":
         obj["hashes"] = {"SHA-256": node["value"]}
