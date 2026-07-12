@@ -1,0 +1,21 @@
+{
+  "_comment": "VirusTotal-style file reports. Each sample maps to a malware family and the C2 IPs it contacts, tying the hash layer to infrastructure.",
+  "files": [
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "svchost_update.exe",
+      "malware": "X-Agent",
+      "campaign": "fancy-bear-2026",
+      "contacted_ips": ["91.240.118.172"],
+      "detections": 54
+    },
+    {
+      "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+      "name": "invoice_payload.dll",
+      "malware": "Ryuk",
+      "campaign": "ryuk-wave-2026",
+      "contacted_ips": ["45.155.205.233"],
+      "detections": 61
+    }
+  ]
+}

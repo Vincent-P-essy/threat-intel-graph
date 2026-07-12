@@ -1,0 +1,26 @@
+{
+  "_comment": "Abuse.ch URLhaus-style malicious URL feed. Each URL is hosted on a domain and indicates a malware family / campaign.",
+  "urls": [
+    {
+      "url": "http://secure-mail-verify.com/login",
+      "host": "secure-mail-verify.com",
+      "malware": "X-Agent",
+      "campaign": "fancy-bear-2026",
+      "tags": ["phishing", "credential-harvest"]
+    },
+    {
+      "url": "http://mail-auth-check.net/session/refresh",
+      "host": "mail-auth-check.net",
+      "malware": "X-Agent",
+      "campaign": "fancy-bear-2026",
+      "tags": ["phishing"]
+    },
+    {
+      "url": "http://invoice-download-secure.com/invoice.doc",
+      "host": "invoice-download-secure.com",
+      "malware": "Ryuk",
+      "campaign": "ryuk-wave-2026",
+      "tags": ["malware-download", "maldoc"]
+    }
+  ]
+}

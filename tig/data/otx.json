@@ -1,0 +1,32 @@
+{
+  "_comment": "AlienVault OTX-style pulses: curated indicator sets tied to a campaign, with passive-DNS resolutions.",
+  "pulses": [
+    {
+      "name": "Fancy Bear credential-phishing infrastructure",
+      "campaign": "fancy-bear-2026",
+      "malware": "X-Agent",
+      "indicators": [
+        {"type": "domain", "value": "secure-mail-verify.com"},
+        {"type": "domain", "value": "mail-auth-check.net"},
+        {"type": "ip", "value": "185.220.101.44"},
+        {"type": "ip", "value": "91.240.118.172"}
+      ],
+      "resolutions": [
+        ["secure-mail-verify.com", "185.220.101.44"],
+        ["mail-auth-check.net", "91.240.118.172"]
+      ]
+    },
+    {
+      "name": "Ryuk delivery infrastructure",
+      "campaign": "ryuk-wave-2026",
+      "malware": "Ryuk",
+      "indicators": [
+        {"type": "domain", "value": "invoice-download-secure.com"},
+        {"type": "ip", "value": "45.155.205.233"}
+      ],
+      "resolutions": [
+        ["invoice-download-secure.com", "45.155.205.233"]
+      ]
+    }
+  ]
+}

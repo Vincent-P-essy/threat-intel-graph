@@ -1,0 +1,33 @@
+{
+  "_comment": "MITRE ATT&CK groups/software/techniques slice. Establishes the actor layer: intrusion-sets, the techniques and malware they use, the CVEs they exploit, and their tracked campaigns.",
+  "intrusion_sets": [
+    {
+      "name": "APT28",
+      "aliases": ["Fancy Bear", "Sofacy", "STRONTIUM"],
+      "country": "Russia",
+      "techniques": ["T1566", "T1071", "T1078"],
+      "exploits": ["CVE-2024-3400"],
+      "malware": ["X-Agent"],
+      "campaigns": ["fancy-bear-2026"]
+    },
+    {
+      "name": "FIN12",
+      "aliases": ["Wizard Spider"],
+      "country": "Russia",
+      "techniques": ["T1486", "T1071"],
+      "exploits": ["CVE-2021-44228"],
+      "malware": ["Ryuk"],
+      "campaigns": ["ryuk-wave-2026"]
+    }
+  ],
+  "techniques": [
+    {"id": "T1566", "name": "Phishing"},
+    {"id": "T1071", "name": "Application Layer Protocol"},
+    {"id": "T1078", "name": "Valid Accounts"},
+    {"id": "T1486", "name": "Data Encrypted for Impact"}
+  ],
+  "cves": [
+    {"id": "CVE-2024-3400", "cvss": 10.0, "product": "PAN-OS GlobalProtect"},
+    {"id": "CVE-2021-44228", "cvss": 10.0, "product": "Apache Log4j 2"}
+  ]
+}
