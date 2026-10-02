@@ -1,0 +1,60 @@
+{
+  "jobs": [
+    {
+      "root": ".",
+      "label": "threat-intel-graph",
+      "caption": "The actual graph explorer and in-memory unit tests use only the publicly committed offline sample JSON feeds under tig/data. Indicator strings are graph data and are never contacted. Neo4j and external model integrations are disabled.",
+      "setup": [
+        [
+          "python",
+          "-m",
+          "pip",
+          "install",
+          "-r",
+          "requirements.txt"
+        ]
+      ],
+      "commands": [
+        {
+          "args": [
+            "python",
+            "-m",
+            "pytest",
+            "-v",
+            "--tb=short",
+            "tests/test_graph.py"
+          ],
+          "env": {
+            "NEO4J_URI": "",
+            "ANTHROPIC_API_KEY": ""
+          }
+        },
+        {
+          "args": [
+            "python",
+            "-m",
+            "tig.ingest"
+          ],
+          "env": {
+            "NEO4J_URI": "",
+            "ANTHROPIC_API_KEY": ""
+          }
+        }
+      ],
+      "server": [
+        "python",
+        "-m",
+        "uvicorn",
+        "tig.api:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8650"
+      ],
+      "server_env": {
+        "NEO4J_URI": "",
+        "ANTHROPIC_API_KEY": ""
+      }
+    }
+  ]
+}
