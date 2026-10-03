@@ -16,6 +16,12 @@ D3.js force graph.
 
 ---
 
+## Dashboard Preview
+
+![Threat intelligence graph populated from the offline sample feeds](docs/screenshots/dashboard-overview.png)
+
+D3 explorer populated from the project’s offline sample feeds.
+
 ## The idea
 
 A CTI analyst rarely gets a clean answer from a flat table of indicators. The
